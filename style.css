@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main);
+}
+/* is flex start the best way to put text on left side? */
+.container {
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--Very-dark-blue-card);
+}
+.equilibrium-img {
+    width: 280px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    align-self: center;
+}
+.container h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--White);
+    margin-left: 20px;
+}
+.container p {
+    margin-left: 20px;
+}
+.container div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.creator {
+    font-size: 15px;
+    color: var(--White);
+    border-top: 1px solid var(--Very-dark-blue-line);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* inline block not putting image on same line as text, had to use flex */
+.creator img {
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+}
+.blue-text {
+    color: var(--Soft-blue);
+}
+.green-text {
+    color: var(--Cyan);
+}
+@media screen and (max-width: 375px) {
+    
+}
