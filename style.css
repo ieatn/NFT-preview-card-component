@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 :root {
     --Soft-blue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
@@ -13,44 +14,40 @@
     box-sizing: border-box;
 }
 body {
-    font-size: 18px;
+    font-size: 1rem;
     font-family: 'Outfit', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     height: 100vh;
     background-color: var(--Very-dark-blue-main);
 }
-/* is flex start the best way to put text on left side? */
-.container {
+.card {
     width: 300px;
     height: 500px;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
     background-color: var(--Very-dark-blue-card);
 }
-.images {
+/* for eye */
+.image-container {
+    border-radius: 15px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
-.images:hover {
+.image-container:hover {
     background-color: var(--Cyan);
     z-index: 1;
 }
-.equilibrium-img {
-    padding: 1rem;
+.card-img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     z-index: 1;
 }
-.equilibrium-img:hover {
+.card-img:hover {
     opacity: 0.3;
     z-index: 0;
 }
@@ -58,44 +55,17 @@ body {
     z-index: 0;
     position: absolute;
 }
-.container h1 {
+.card h1 {
     font-size: 20px;
     font-weight: 700;
     color: var(--White);
     margin-left: 20px;
 }
-.container p {
+.card h1:hover {
+    color: var(--Cyan);
+}
+.card p {
     margin-left: 20px;
-}
-.icon-row {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-}
-.flex-group {
-    display: flex;
-}
-.creator {
-    font-size: 15px;
-    color: var(--White);
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* inline block not putting image on same line as text, had to use flex */
-.creator img {
-    display: inline-block;
-    width: 30px;
-    margin-right: 0.5rem;
-}
-.line {
-    width: 90%;
-    border-bottom: solid 1px var(--Very-dark-blue-line);
-    display: grid;
-    margin: 0 auto;
 }
 .blue-text {
     color: var(--Soft-blue);
@@ -103,23 +73,58 @@ body {
 .green-text {
     color: var(--Cyan);
 }
-.eth {
+
+/* icons */
+
+.icon-row {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+#eth {
     font-size: 0.9rem;
     font-family: inherit;
 }
-.days {
+#days {
     font-size: 0.9rem;
     font-family: inherit;
 }
+.flex-group {
+    display: flex;
+}
+
+/* creator */
+
+.creator {
+    font-size: 15px;
+    color: var(--White);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.creator img {
+    width: 30px;
+}
+
+.line {
+    width: 90%;
+    border-bottom: solid 1px var(--Very-dark-blue-line);
+    display: grid;
+    margin: 0 auto;
+}
+
 .name {
+    color: white;
     margin-left: 0.3rem;
 }
 .name:hover {
     color: var(--Cyan);
 }
-h1:hover {
-    color: var(--Cyan);
-}
+
 @media screen and (max-width: 375px) {
     .card {
         width: 90%;
