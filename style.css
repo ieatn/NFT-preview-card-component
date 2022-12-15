@@ -33,11 +33,30 @@ body {
     align-items: flex-start;
     background-color: var(--Very-dark-blue-card);
 }
+.images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.images:hover {
+    background-color: var(--Cyan);
+    z-index: 1;
+}
 .equilibrium-img {
-    width: 280px;
-    padding: 10px 10px;
+    padding: 1rem;
+    width: 100%;
     border-radius: 20px;
-    align-self: center;
+    z-index: 1;
+}
+.equilibrium-img:hover {
+    opacity: 0.3;
+    z-index: 0;
+}
+.eye {
+    z-index: 0;
+    position: absolute;
 }
 .container h1 {
     font-size: 20px;
@@ -48,16 +67,18 @@ body {
 .container p {
     margin-left: 20px;
 }
-.container div {
+.icon-row {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.flex-group {
+    display: flex;
+}
 .creator {
     font-size: 15px;
     color: var(--White);
-    border-top: 1px solid var(--Very-dark-blue-line);
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -67,7 +88,12 @@ body {
 .creator img {
     display: inline-block;
     width: 30px;
-    margin-right: 20px;
+    margin-right: 0.5rem;
+}
+.line {
+    border-bottom: solid 1px var(--Very-dark-blue-line);
+    display: grid;
+    margin: 0 auto;
 }
 .blue-text {
     color: var(--Soft-blue);
@@ -75,6 +101,25 @@ body {
 .green-text {
     color: var(--Cyan);
 }
+.eth {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+.days {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+.name {
+    margin-left: 0.3rem;
+}
+.name:hover {
+    color: var(--Cyan);
+}
+h1:hover {
+    color: var(--Cyan);
+}
 @media screen and (max-width: 375px) {
-    
+    .card {
+        width: 90%;
+    }
 }
