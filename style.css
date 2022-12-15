@@ -68,10 +68,11 @@ body {
     margin-left: 20px;
 }
 .icon-row {
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 .flex-group {
     display: flex;
@@ -91,6 +92,7 @@ body {
     margin-right: 0.5rem;
 }
 .line {
+    width: 90%;
     border-bottom: solid 1px var(--Very-dark-blue-line);
     display: grid;
     margin: 0 auto;
