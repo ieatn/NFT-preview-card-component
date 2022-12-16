@@ -30,9 +30,9 @@ body {
     padding: 1rem;
     background-color: var(--Very-dark-blue-card);
 }
-/* for eye */
 .image-container {
     border-radius: 15px;
+    /* for eye */
     position: relative;
     display: flex;
     justify-content: center;
@@ -40,7 +40,6 @@ body {
 }
 .image-container:hover {
     background-color: var(--Cyan);
-    z-index: 1;
 }
 .card-img {
     width: 100%;
@@ -53,19 +52,20 @@ body {
 }
 .eye {
     z-index: 0;
+    /* absolute auto centers */
     position: absolute;
 }
+.card-body {
+    margin-left: 0.3rem;
+}
 .card h1 {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--White);
-    margin-left: 20px;
+    margin-bottom: 1rem;
 }
 .card h1:hover {
     color: var(--Cyan);
-}
-.card p {
-    margin-left: 20px;
 }
 .blue-text {
     color: var(--Soft-blue);
@@ -77,7 +77,7 @@ body {
 /* icons */
 
 .icon-row {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,28 +98,22 @@ body {
 /* creator */
 
 .creator {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: var(--White);
     margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin-left: 0.3rem;
     display: flex;
     align-items: center;
 }
-
 .creator img {
     width: 30px;
 }
-
 .line {
-    width: 90%;
+    width: 100%;
     border-bottom: solid 1px var(--Very-dark-blue-line);
-    display: grid;
-    margin: 0 auto;
 }
-
 .name {
     color: white;
-    margin-left: 0.3rem;
 }
 .name:hover {
     color: var(--Cyan);
